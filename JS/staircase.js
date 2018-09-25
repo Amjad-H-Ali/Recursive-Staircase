@@ -19,6 +19,19 @@ const helper = (steps, storage) => {
 }
 
 // Helper function
-const stairCase = steps => return helper(steps, []);
+const stairCase = steps => helper(steps, []);
 
 
+console.log(stairCase(5)); // 8
+
+console.log(stairCase(4)); // 5
+
+console.log(stairCase(3)); // 3
+
+console.log(stairCase(2)); // 2
+
+console.log(stairCase(1)); // 1
+
+console.log(stairCase(0)); // 1
+
+console.log(stairCase(7)); // 21
