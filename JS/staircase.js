@@ -10,6 +10,10 @@ const stairCase = (steps, storage) => {
 
 	// Ex: Answer to 3 steps equals answer to 2 steps + answer to 1 Step
 	let result = stairCase(steps - 1, storage) + stairCase(steps - 2, storage);
-	 
+
+	// Store result in array before returning it
+	storage[steps] = result;
+
+	return result;
 
 }
