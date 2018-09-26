@@ -1,7 +1,8 @@
 console.log("Staircase!");
 
 // Takes in amount of steps and array to store results to prevent redundant computation
-const helper = (steps, storage) => {
+// Defualt value of storage is empty array
+const stairCase = (steps, storage = []) => {
 	// Exit code for when stairs equal 0 or 1 step
 	if (steps <= 1) return 1;
 
@@ -9,7 +10,7 @@ const helper = (steps, storage) => {
 	if (storage[steps]) return storage[steps];
 
 	// Ex: Answer to 3 steps equals answer to 2 steps + answer to 1 Step
-	let result = helper(steps - 1, storage) + helper(steps - 2, storage);
+	let result = stairCase(steps - 1, storage) + stairCase(steps - 2, storage);
 
 	// Store result in array before returning it
 	storage[steps] = result;
@@ -18,8 +19,6 @@ const helper = (steps, storage) => {
 
 }
 
-// Helper function
-const stairCase = steps => helper(steps, []);
 
 
 console.log(stairCase(5)); // 8
